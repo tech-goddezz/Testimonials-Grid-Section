@@ -1,0 +1,441 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* color */
+    --clr-purple50: hsl(260, 100%, 95%);
+    --clr-purple300: hsl(264, 82%, 80%);
+    --clr-purple500: hsl(263, 55%, 52%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey100: hsl(214, 17%, 92%);
+    --clr-grey200: hsl(0, 0%, 81%);
+    --clr-grey400: hsl(224, 10%, 45%);
+    --clr-grey500: hsl(217, 19%, 35%);
+    --clr-darkblue: hsl(219, 29%, 14%);
+    --clr-black: hsl(0, 0%, 7%);
+
+
+     /* layout */
+    --mobile-width-layout: 375px;
+    --desktop-width-layout: 1200px;
+
+    --card-width-mobile: 350px;
+    --card-width-desktop: 768px;
+
+
+    /* typography */
+    --ff-name: "Barlow Semi Condensed", sans-serif;
+
+    --body-text: 13px;
+    --card-headings: 16px;
+    --quotes: 15px;
+
+
+    --card-padding: 2rem;
+    --card-radius: 0.5rem;
+
+    --fs-name: 15px;
+    --weight-name: 600;
+    --lineHeight-name: 1.4;
+
+    --subtitle-fs: 12px;
+    --subtitle-weight: 500;
+    --subtitle-lineHeight: 1.4;
+
+    --fs-danielQuote: 22px;
+    --weight-danielQuote: 600;
+    --linHeight-danielQuote: 1.5;
+
+    --fs-otherQuote: 22px;
+    --weight-otherQuote: 500;
+    --linHeight-otherQuote: 1.6;
+
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    width: 100%;
+    max-width: var(--mobile-width-layout);
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    justify-content: center;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.card-all {
+    display:flex;
+    flex-direction: column;
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.card-dan {
+    display:flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    border-radius: var(--card-radius);
+    box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.meta {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-block-end: 1rem;
+}
+
+.dan-meta {
+    padding-top: 2rem;
+    padding-bottom: 1.2rem;
+}
+
+.dan-descr {
+    margin-top: -1.7rem;
+}
+
+.general-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    block-size: auto;
+}
+
+.quote_div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote_img {
+    padding-right: 1.5rem;  
+}
+
+.daniel .img_border {
+    border: 2px solid hsl(263, 88%, 75%);
+}
+
+.patrick img {
+    border: 2px solid hsl(263, 88%, 75%);
+}
+
+.name {
+    font-size: var(--fs-name);
+    font-weight: var(--weight-name);
+    line-height: var(--lineHeight-name);
+}
+
+.sub {
+    font-size: var(--subtitle-fs);
+    font-weight: var(--subtitle-weight);
+    line-height: var(--subtitle-lineHeight);
+}
+
+.card .darkName {
+    color: var(--clr-white);
+}
+
+.card .lightName {
+    color: var(--clr-grey500);
+}
+
+.card .darkSub {
+    color: var(--clr-grey200);
+}
+
+.card .lightSub {
+    color: var(--clr-grey400);
+}
+
+.descr {
+    font-size: var(--fs-otherQuote);
+    font-weight: var(--weight-otherQuote);
+    line-height: var(--linHeight-otherQuote);
+    margin-block-end: 1rem;
+}
+
+.darkDescr {
+    color: var(--clr-white);
+}
+
+.lightDescr {
+    color: var(--clr-grey500);
+}
+
+
+
+.daniel {
+    grid-area: one;
+    background-color: var(--clr-purple500);
+    color: var(--clr-white);
+}
+
+.daniel .descr {
+    font-size: var(--fs-danielQuote);
+    font-weight: var(--weight-danielQuote);
+    line-height: var(--linHeight-danielQuote);
+    color: var(--clr-white);
+}
+
+
+.jonathan {
+    grid-area: two;
+    background-color: var(--clr-grey500);
+    color: var(--clr-white);
+}
+
+.jeanette {
+    grid-area: three;
+    background-color: var(--clr-white);
+    color: var(--clr-grey500);
+}
+
+.patrick {
+    grid-area: four;
+    background-color: var(--clr-darkblue);
+    color: var(--clr-white);
+}
+
+.kira {
+    grid-area: five;
+    background-color: var(--clr-white);
+    color: var(--clr-grey500);
+}
+
+@media (min-width: 30rem) {
+    .container {
+    max-width: var(--desktop-width-layout);
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    grid-template-areas: 
+    'one one two five'
+    'three four four five';
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+body {
+    background-color: var(--clr-grey100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    max-width: var(--mobile-width-layout);
+    border: 2px solid rgb(238, 9, 9);
+    margin: 4rem 0;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.meta {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-block-end: 1rem;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    block-size: auto;
+    max-inline-size: 100%;
+    flex-shrink: 0;
+}
+
+.daniel img {
+    border: 2px solid hsl(263, 88%, 75%);
+}
+
+.patrick img {
+    border: 2px solid hsl(263, 88%, 75%);
+}
+
+
+.name {
+    font-size: var(--fs-name);
+    font-weight: var(--weight-name);
+    line-height: var(--lineHeight-name);
+}
+
+.sub {
+    font-size: var(--subtitle-fs);
+    font-weight: var(--subtitle-weight);
+    line-height: var(--subtitle-lineHeight);
+}
+
+.card .darkName {
+    color: var(--clr-white);
+}
+
+.card .lightName {
+    color: var(--clr-grey500);
+}
+
+.card .darkSub {
+    color: var(--clr-grey200);
+}
+
+.card .lightSub {
+    color: var(--clr-grey400);
+}
+
+
+.descr {
+    font-size: var(--fs-otherQuote);
+    font-weight: var(--weight-otherQuote);
+    line-height: var(--linHeight-otherQuote);
+    margin-block-end: 1rem;
+}
+
+.darkDescr {
+    color: var(--clr-white);
+}
+
+.lightDescr {
+    color: var(--clr-grey500);
+}
+
+.daniel {
+    grid-area: one;
+    background-color: var(--clr-purple500);
+    color: var(--clr-white);
+}
+
+.daniel .descr {
+    font-size: var(--fs-danielQuote);
+    font-weight: var(--weight-danielQuote);
+    line-height: var(--linHeight-danielQuote);
+    color: var(--clr-white);
+    margin-block-end: 16px;
+}
+
+.jonathan {
+    grid-area: two;
+    background-color: var(--clr-darkblue);
+    color: var(--clr-white);
+}
+
+.jeanette {
+    grid-area: three;
+    background-color: var(--clr-white);
+    color: var(--clr-grey500);
+}
+
+.patrick {
+    grid-area: four;
+    background-color: var(--clr-grey500);
+    color: var(--clr-white);
+}
+
+.kira {
+    grid-area: five;
+    background-color: var(--clr-white);
+    color: var(--clr-grey500);
+}
+
+
+
+@media (min-width: 25rem) {
+    .container {
+        max-width: 800px;
+        justify-items: stretch;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        'one one two five '
+        'three four four five';
+        align-items: center;
+        grid-template-rows: auto auto;
+}
+
+.card {
+    max-width: none;
+}
+
+body {
+    font-size: 10px;
+    padding: 4rem;
+}
+
+} */
