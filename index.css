@@ -20,37 +20,37 @@
 
 
      /* layout */
-    --mobile-width-layout: 375px;
-    --desktop-width-layout: 1200px;
+    --mobile-width-layout: 23.4375rem;
+    --desktop-width-layout: 75rem;
 
-    --card-width-mobile: 350px;
-    --card-width-desktop: 768px;
+    --card-width-mobile: 21.875rem;
+    --card-width-desktop: 48rem;
 
 
     /* typography */
     --ff-name: "Barlow Semi Condensed", sans-serif;
 
-    --body-text: 13px;
-    --card-headings: 16px;
-    --quotes: 15px;
+    --body-text: 0.8125rem;
+    --card-headings: 1rem;
+    --quotes: 0.9375rem;
 
 
     --card-padding: 2rem;
     --card-radius: 0.5rem;
 
-    --fs-name: 15px;
+    --fs-name: 0.9375rem;
     --weight-name: 600;
     --lineHeight-name: 1.4;
 
-    --subtitle-fs: 12px;
+    --subtitle-fs: 0.75rem;
     --subtitle-weight: 500;
     --subtitle-lineHeight: 1.4;
 
-    --fs-danielQuote: 22px;
+    --fs-danielQuote: 1.375rem;
     --weight-danielQuote: 600;
     --linHeight-danielQuote: 1.5;
 
-    --fs-otherQuote: 22px;
+    --fs-otherQuote: 1.375rem;
     --weight-otherQuote: 500;
     --linHeight-otherQuote: 1.6;
 
@@ -67,6 +67,7 @@
 
 
 body {
+    background-color: #ECF2F8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +81,7 @@ body {
     display: grid;
     gap: 1.5rem;
     margin: 2rem 0;
+    padding: 4rem;
     justify-content: center;
     grid-auto-columns: 1fr;
     grid-template-areas: 
@@ -95,7 +97,8 @@ body {
     flex-direction: column;
     padding: var(--card-padding);
     border-radius: var(--card-radius);
-    box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.1);
+    box-shadow: 
+    0 2rem 4rem rgba(0, 0, 0, 0.6);
     width: 100%;
 }
 
@@ -127,8 +130,8 @@ body {
 }
 
 .general-img {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
@@ -145,11 +148,11 @@ body {
 }
 
 .daniel .img_border {
-    border: 2px solid hsl(263, 88%, 75%);
+    border: 0.125rem solid hsl(263, 88%, 75%);
 }
 
 .patrick img {
-    border: 2px solid hsl(263, 88%, 75%);
+    border: 0.125rem solid hsl(263, 88%, 75%);
 }
 
 .name {
